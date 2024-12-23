@@ -3,31 +3,31 @@ This project implements a Convolutuion NN model for CIFAR10 10 Class image class
 
 ## Project Structure
 
-├── models/custom_models.py # Contains all variation of model architectures
-├── train.py # Training script with data loading and training loops
-├── data/ # Directory for CIFAR10 dataset
-├── utils/transform.py # Directory for albumentation transformation
+├── models/custom_models.py # Contains all variation of model architectures.
+├── train.py # Training script with data loading and training loops.
+├── data/ # Directory for CIFAR10 dataset.
+├── utils/transform.py # Directory for albumentation transformation.
 
 ## Model Architecture
 
 The model consists of 4 convolution blocks (C1, C2, C3, C4) with the following features:
-- C1: Standard convolutions
-- C2: Dilated convolutions 
-- C3: Depthwise separable convolutions 
-- C4: Standard convolutions 
-- Global Average Pooling followed by FC layer (**GAP and FC**)
-- Final Receptive Field: **59** ( Required> 44)
-- No MaxPooling
-- Less than 200k parameters (**Parameters - 198862**)
+- C1: Standard convolutions.
+- C2: Dilated convolutions. 
+- C3: Depthwise separable convolutions. 
+- C4: Standard convolutions. 
+- Global Average Pooling followed by FC layer (**GAP and FC**).
+- Final Receptive Field: **59** ( Required> 44).
+- No MaxPooling.
+- Less than 200k parameters (**Parameters - 198862**).
 
 ## Data Augmentation
 
  Albumentations library used :
-    HorizontalFlip(p=0.5),
-    ShiftScaleRotate(shift_limit=0.05, scale_limit=0.05, rotate_limit=15, p=0.5),
+    HorizontalFlip(p=0.5).
+    ShiftScaleRotate(shift_limit=0.05, scale_limit=0.05, rotate_limit=15, p=0.5).
     CoarseDropout(max_holes=1, max_height=16, max_width=16, min_holes=1, 
-                       min_height=16, min_width=16, fill_value=[0.4914, 0.4822, 0.4465], p=0.5),
-    Normalize(mean=[0.4914, 0.4822, 0.4465], std=[0.2470, 0.2435, 0.2616]) CIFAR10 Mean and St Deviatiation
+                       min_height=16, min_width=16, fill_value=[0.4914, 0.4822, 0.4465], p=0.5).
+    Normalize(mean=[0.4914, 0.4822, 0.4465], std=[0.2470, 0.2435, 0.2616]) CIFAR10 Mean and St Deviatiation.
     
 ## Training Details
 
