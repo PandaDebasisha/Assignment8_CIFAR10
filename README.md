@@ -75,17 +75,17 @@ Layer (type)               Output Shape         Param #
              ReLU-31           [-1, 90, 32, 32]               0
           Dropout-32           [-1, 90, 32, 32]               0
            Conv2d-33           [-1, 72, 32, 32]          58,320
-AdaptiveAvgPool2d-34             [-1, 72, 1, 1]               0
+           AdaptiveAvgPool2d-34  [-1, 72, 1, 1]               0
            Linear-35                   [-1, 10]             730
-================================================================
-Total params: 198,862
-Trainable params: 198,862
-Non-trainable params: 0
+           
+     Total params: 198,862
+     Trainable params: 198,862
+     Non-trainable params: 0
 ----------------------------------------------------------------
-Input size (MB): 0.01
-Forward/backward pass size (MB): 13.13
-Params size (MB): 0.76
-Estimated Total Size (MB): 13.90
+     Input size (MB): 0.01
+     Forward/backward pass size (MB): 13.13
+     Params size (MB): 0.76
+     Estimated Total Size (MB): 13.90
 ----------------------------------------------------------------
 
 Total Parameters: 198862
